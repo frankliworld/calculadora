@@ -13,7 +13,7 @@ let listResult = ["123", "-", "673", "*", "2"];
 
 let temp1 = "";
 let temp2 = "";
-let res = ""
+let res = "";
 
 let operator = "";
 let type = "number"; //number or operator
@@ -42,6 +42,8 @@ function Writting() {
       operator = "";
     }
     type = "operator";
+  } else if (value == "C") {
+    clean()
   } else {
     console.log("no validado", value);
   }
@@ -62,4 +64,14 @@ function opera(op) {
     temp2 = "";
     console.log("new operator", type);
   }
+}
+
+function clean() {
+  temp1 = "";
+  temp2 = "";
+  res = "";
+  operator = "";
+  type = "number";
+  console.log("cleaning...")
+  
 }
